@@ -20,3 +20,7 @@ package() {
   cp -r ${_gitname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
   sh /usr/share/plasma/plasmoids/$(pkgname)/translate/build --restartplasma
 }
+
+post_install() {
+   sh /usr/share/plasma/plasmoids/$(pkgname)/translate/build --restartplasma
+}
