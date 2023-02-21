@@ -1,6 +1,7 @@
 # Maintainer: Maurício de Lima <mauriciodelima.mol@gmail.com>
 
 pkgname=org.kde.plasma.dittomenu
+_gitname=dittoMenuKDE
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 pkgdesc="Menu de programas do UaiSO"
@@ -16,5 +17,5 @@ md5sums=('SKIP')
 
 package() {
   install -dm755 "${pkgdir}/usr/share/plasma/plasmoids"
-  cp -r ${srcdir}/${pkgname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
+  cp -r ${_gitname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
 }
