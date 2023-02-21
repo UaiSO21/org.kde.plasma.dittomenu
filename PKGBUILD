@@ -18,9 +18,8 @@ md5sums=('SKIP')
 package() {
   install -dm755 "${pkgdir}/usr/share/plasma/plasmoids"
   cp -r ${_gitname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
-  sh /usr/share/plasma/plasmoids/$(pkgname)/translate/build --restartplasma
 }
 
 post_install() {
-   sh /usr/share/plasma/plasmoids/$(pkgname)/translate/build --restartplasma
+  sh /usr/share/plasma/plasmoids/org.kde.plasma.dittomenu/translate/build.sh --restartplasma
 }
