@@ -16,5 +16,5 @@ md5sums=('SKIP')
 
 package() {
   install -dm755 "${pkgdir}/usr/share/plasma/plasmoids"
-  cp -r ${srcdir}/${pkgname}/package "${pkgdir}/usr/share/plasma/plasmoids/${_gitname}"
+  cp -r ${srcdir}/${pkgname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
 }
