@@ -14,7 +14,6 @@ provides=("$pkgname")
 source=("git+${url}.git")
 md5sums=('SKIP')
 
-
 package() {
   install -dm755 "${pkgdir}/usr/share/plasma/plasmoids"
   cp -r ${_gitname}/package "${pkgdir}/usr/share/plasma/plasmoids/${pkgname}"
